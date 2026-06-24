@@ -1,1 +1,74 @@
+api:
+  enabled: true
+  host: 0.0.0.0
+  port: 8080
+crew_behavior:
+  iou_threshold: 0.05
+  proximity_threshold: 120
+export:
+  export_interval: 1.0
+  export_json: true
+  output_dir: outputs/
+lifejacket:
+  iou_threshold: 0.1
+logging:
+  file: outputs/monitor.log
+  level: INFO
+  rotation: 10 MB
+model:
+  conf_threshold: 0.5
+  device: '0'
+  iou_threshold: 0.45
+  name: yolo11s
+  weights: weights/best.pt
+output:
+  save_dir: outputs/
+  save_video: true
+  snapshot_dir: outputs/snapshots/
+  snapshot_on_alarm: true
+rope_analysis:
+  anchor_stability_threshold: 30
+  angle_max_deg: 90.0
+  angle_min_deg: 0.0
+  min_rope_length: 20
+  ship_endpoint_dist_threshold: 150
+  tension_threshold: 0.3
+state_machine:
+  confirm_frames: 3
+  timeout_seconds: 30.0
+visualization:
+  colors:
+    crew_active:
+    - 0
+    - 255
+    - 255
+    moored:
+    - 0
+    - 255
+    - 0
+    switching:
+    - 0
+    - 255
+    - 255
+    unmoored:
+    - 0
+    - 0
+    - 255
+    wall_region:
+    - 255
+    - 200
+    - 0
+  font_scale: 0.6
+  thickness: 2
+wall_region:
+  default_ratio: 0.15
+  points:
+  - - 546
+    - 186
+  - - 555
+    - 309
+  - - 635
+    - 312
+  - - 637
+    - 124
 
